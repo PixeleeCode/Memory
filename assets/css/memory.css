@@ -1,0 +1,141 @@
+.scores {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 50px 0 0;
+  color: #94A3B8;
+}
+.scores span, .scores time {
+  color: #ffffff;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.memory {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+.memory__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 0.75rem;
+}
+
+.flip {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  cursor: pointer;
+}
+.flip__content {
+  width: 100%;
+  height: 100%;
+  transition: transform 450ms;
+  transform-style: preserve-3d;
+}
+.flip__content--front {
+  color: #ffffff;
+  font-size: 2rem;
+  background-color: #111827;
+  transition: all 350ms;
+}
+.flip__content--front:hover {
+  color: #78350F;
+  background-color: #FBBF24;
+  transition: all 350ms;
+}
+.flip__content--back {
+  font-size: 1.75rem;
+  background-color: #F59E0B;
+  transform: rotateY(180deg);
+}
+.flip__content--front, .flip__content--back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.flip-content-rotate {
+  transform: rotateY(180deg);
+  transition: transform 350ms;
+}
+
+.flip-content-bg-fade {
+  cursor: not-allowed;
+  background-color: #334155;
+  transition: background-color 350ms;
+}
+
+.winner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(17, 24, 39, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+}
+.winner p {
+  margin: 20px;
+  font-size: 4rem;
+  color: #ffffff;
+}
+.winner a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  background-color: #F59E0B;
+  padding: 0.75rem 2rem;
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: background-color 350ms;
+}
+.winner a:hover {
+  background-color: #FBBF24;
+  transition: background-color 350ms;
+}
+
+.view {
+  opacity: 1;
+  transition: opacity 750ms;
+}
+
+@media screen and (min-width: 992px) {
+  .memory {
+    padding: 50px 0;
+  }
+  .memory__grid {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 0.75rem;
+  }
+
+  .flip {
+    width: 150px;
+    height: 150px;
+  }
+  .flip__content--front {
+    font-size: 2.75rem;
+  }
+  .flip__content--back {
+    font-size: 2rem;
+  }
+}
+
+/*# sourceMappingURL=memory.css.map */

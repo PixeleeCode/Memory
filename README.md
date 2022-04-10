@@ -1,5 +1,7 @@
 # Memory
 
+Version TypeScript
+
 ## Description
 
 Toutes les cartes sont affichées faces cachées. Le joueur doit retourner deux cartes en cliquant sur celles-ci. S'il
@@ -11,7 +13,7 @@ Si les deux cartes ne vont pas ensemble, elles se repositionneront en face cach�
 ## Améliorations
 
 Des éléments seront à ajoutés afin d'améliorer l'expérience du jeu et y inclure du challenge comme :
-* Un minuteur.
+* ~~Un minuteur.~~
 * Un système de level.
 * Un système de points.
 * Choisir le nombre de cartes dans le jeu.

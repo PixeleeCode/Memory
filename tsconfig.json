@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "outDir": "dist", // Répertoire de destination
+        "target": "ES2015", // Navigateurs récents
+        "noEmitOnError": true, // Évite la compilation du code si une erreur est présente
+        "strict": true
+    },
+    "files": [
+        "src/app.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
